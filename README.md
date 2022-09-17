@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# School-Library
+# Blog
 
 > This is a blog application where users can add, like comment and manage their blog posts.
 
