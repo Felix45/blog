@@ -17,10 +17,10 @@ RSpec.describe Like, type: :model do
     )
   end
 
-  it '@posts like_counter should increase by one' do
-    Like.create(author_id: @user.id, post_id: @post.id)
-    Like.create(author_id: @user.id, post_id: @post.id)
+  it '@users comments_counter should increase by one' do
+    Comment.create(text: 'Hello there!!', author_id: @user.id, post_id: @post.id)
+    Comment.create(text: 'Welcome home!!', author_id: @user.id, post_id: @post.id)
     post = Post.find(@post.id)
-    expect(post.likes_counter).to eq(2)
+    expect(post.comments_counter).to eq(2)
   end
 end
