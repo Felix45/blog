@@ -47,9 +47,13 @@ Install all project dependencies by running the command below
 ```
 
 ### Check linter errors
-Start the webpack dev server
 ``` 
   $ rubocop .
+```
+
+### Run tests
+``` 
+  $ rspec
 ```
 
 ### Authors
