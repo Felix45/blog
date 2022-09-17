@@ -66,7 +66,7 @@ RSpec.describe Post, type: :model do
         bio: 'Graphic designer',
         photo: 'http://hello.com/org.png',
         posts_counter: 0
-    )
+      )
     10.times.collect do
       Comment.create(text: 'Hello, world', author_id: user.id, post_id: @post.id)
     end

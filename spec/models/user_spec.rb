@@ -2,7 +2,12 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before(:all) do
-    @user = User.new(name: 'Felix', bio: 'Software Developer', photo: 'http://hello.com/org.png', posts_counter: 0)
+    @user = User.new(
+        name: 'Felix',
+        bio: 'Software Developer',
+        photo: 'http://hello.com/org.png',
+        posts_counter: 0
+      )
   end
 
   it '@user as created is valid' do
@@ -25,9 +30,20 @@ RSpec.describe User, type: :model do
   end
 
   it 'should return a users last 3 posts' do
-    user = User.create(name: 'Felix', bio: 'Software Developer', photo: 'http://hello.com/org.png', posts_counter: 0)
+    user = User.create(
+        name: 'Felix',
+        bio: 'Software Developer',
+        photo: 'http://hello.com/org.png',
+        posts_counter: 0
+      )
     10.times.collect do
-      Post.create(title: 'Random title', text: 'Hello, world', author_id: user.id, likes_counter: 0, comments_counter: 0)
+      Post.create(
+        title: 'Random title',
+        text: 'Hello, world',
+        author_id: user.id,
+        likes_counter: 0,
+        comments_counter: 0
+      )
     end
     expect(user.recent_posts.length).to eq(3)
   end
