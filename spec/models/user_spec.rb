@@ -3,11 +3,11 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   before(:all) do
     @user = User.new(
-        name: 'Felix',
-        bio: 'Software Developer',
-        photo: 'http://hello.com/org.png',
-        posts_counter: 0
-      )
+      name: 'Felix',
+      bio: 'Software Developer',
+      photo: 'http://hello.com/org.png',
+      posts_counter: 0
+    )
   end
 
   it '@user as created is valid' do
@@ -31,11 +31,11 @@ RSpec.describe User, type: :model do
 
   it 'should return a users last 3 posts' do
     user = User.create(
-        name: 'Felix',
-        bio: 'Software Developer',
-        photo: 'http://hello.com/org.png',
-        posts_counter: 0
-      )
+      name: 'Felix',
+      bio: 'Software Developer',
+      photo: 'http://hello.com/org.png',
+      posts_counter: 0
+    )
     10.times.collect do
       Post.create(
         title: 'Random title',

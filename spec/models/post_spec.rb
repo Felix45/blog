@@ -3,17 +3,17 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   before(:all) do
     @user = User.create(
-        name: 'Felix',
-        bio: 'Software Developer',
-        photo: 'http://hello.com/org.png',
-        posts_counter: 0
+      name: 'Felix',
+      bio: 'Software Developer',
+      photo: 'http://hello.com/org.png',
+      posts_counter: 0
     )
     @post = Post.create(
-        title: 'A new dawn',
-        text: 'Software Developer',
-        author_id: @user.id,
-        comments_counter: 0,
-        likes_counter: 0
+      title: 'A new dawn',
+      text: 'Software Developer',
+      author_id: @user.id,
+      comments_counter: 0,
+      likes_counter: 0
     )
   end
 
@@ -62,11 +62,11 @@ RSpec.describe Post, type: :model do
 
   it 'should return a users last 5 comments' do
     user = User.create(
-        name: 'Alex',
-        bio: 'Graphic designer',
-        photo: 'http://hello.com/org.png',
-        posts_counter: 0
-      )
+      name: 'Alex',
+      bio: 'Graphic designer',
+      photo: 'http://hello.com/org.png',
+      posts_counter: 0
+    )
     10.times.collect do
       Comment.create(text: 'Hello, world', author_id: user.id, post_id: @post.id)
     end
