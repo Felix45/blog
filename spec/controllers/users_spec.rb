@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Users', type: :request do
+RSpec.describe 'Users', :type => ['request', 'feature'] do
   before :each do
     @user = User.new(
       name: 'Felix',
@@ -21,5 +21,15 @@ RSpec.describe 'Users', type: :request do
     get '/users/1'
     expect(response.status).to eq(200)
     expect(response).to render_template('show')
+  end
+
+  it 'renders index template with right text' do
+    visit '/users/'
+    expect(page).to have_text('List of users')
+  end
+
+  it 'renders show template with right text' do
+    visit '/users/1'
+    expect(page).to have_text('User profile')
   end
 end
