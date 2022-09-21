@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Users', :type => ['request', 'feature'] do
+RSpec.describe 'Users', type: %w[request feature] do
   before :each do
     @user = User.new(
       name: 'Felix',
