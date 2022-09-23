@@ -1,1 +1,18 @@
 <h1>Single Post View</h1>
+<section class="mt-4">
+    <h2><%= @post.title %></h2>
+    <strong>By <%= @post.author.name %></strong>
+    <div class="d-flex justify-content-end">
+      <span>Comments: <%= @post.comments_counter || 0 %> </span>
+      <span class="mx-2"> Likes: <%= @post.likes_counter || 0 %></span>
+    </div>
+  <p><%= @post.text %></p>
+</section>
+
+<% if @post.comments.length == 0 %>
+      <p>No comments Available!</p>
+    <% else %>
+    <% @post.comments.each do |comment| %>
+      <p><%= comment.author.name %>: <%=comment.text %></p>
+    <%end%>
+<% end %>
