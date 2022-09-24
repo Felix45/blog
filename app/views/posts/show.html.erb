@@ -13,6 +13,6 @@
       <p>No comments Available!</p>
     <% else %>
     <% @post.comments.each do |comment| %>
-      <p><%= comment.author.name %>: <%=comment.text %></p>
-    <%end%>
+      <p><%= comment.author.name %>: <%= comment.text %></p>
+    <% end %>
 <% end %>

@@ -22,7 +22,7 @@ class PostsController < ApplicationController
           redirect_to user_post_path(current_user, @post.id)
         else
           newpost = Post.new
-          render :new , locals: { newpost: }
+          render :new, locals: { newpost: }
         end
       end
     end
