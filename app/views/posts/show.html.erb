@@ -1,4 +1,9 @@
 <h1>Single Post View</h1>
+
+<% if flash[:success] %>
+  <div class="alert alert-success"><%= flash[:success] %></div>
+<% end %>
+
 <section class="mt-4">
     <h2><%= @post.title %></h2>
     <strong>By <%= @post.author.name %></strong>

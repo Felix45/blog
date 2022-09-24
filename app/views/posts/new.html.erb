@@ -1,4 +1,9 @@
 <h1>Add New Post</h1>
+
+<% if flash[:error] %>
+  <div class="alert alert-danger"><%= flash[:error] %></div>
+<% end %>
+
 <%= form_with model: newpost, url: user_posts_path, method: :post, local: true, scope: :post do |f| %>
 <div>
   <div>

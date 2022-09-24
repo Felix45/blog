@@ -1,4 +1,8 @@
 <h1>Add Comment</h1>
+<% if flash.now[:error] %>
+  <div class="alert alert-danger"><%= flash.now[:error] %></div>
+<% end %>
+
 <%= form_with model: newcomment, url: user_post_comments_path, method: :post, local: true, scope: :comment do |f| %>
 <div>
   <div class="mt-3">
