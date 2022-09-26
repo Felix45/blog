@@ -8,7 +8,7 @@ RSpec.describe 'User', type: :system do
           name: 'Tom',
           bio: 'Software Developer',
           photo: 'http://hello.com/org.png',
-          postsCounter: 4
+          posts_counter: 0
         )
       @post = Post.create(title: 'one post', text: 'first post', author_id: @user.id, comments_counter: 0,
                           likes_counter: 0)
@@ -35,7 +35,7 @@ RSpec.describe 'User', type: :system do
 
     it 'has users number of posts' do
       visit user_path(@user.id)
-      expect(page).to have_content('Number of posts 3')
+      expect(page).to have_content('Number of posts: 3')
     end
 
     it 'has link to all posts' do
