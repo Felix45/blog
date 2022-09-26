@@ -18,7 +18,7 @@ RSpec.describe 'Users', type: %w[request feature] do
   end
 
   it 'renders the show template' do
-    get '/users/1'
+    get "/users/#{@user.id}"
     expect(response.status).to eq(200)
     expect(response).to render_template('show')
   end
@@ -29,7 +29,7 @@ RSpec.describe 'Users', type: %w[request feature] do
   end
 
   it 'renders show template with right text' do
-    visit '/users/1'
+    visit "/users/#{@user.id}"
     expect(page).to have_text('User profile')
   end
 end
