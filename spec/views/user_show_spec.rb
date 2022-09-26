@@ -14,13 +14,13 @@ RSpec.describe 'User', type: :system do
                           likes_counter: 0)
       @post_one = Post.create(title: 'two post', text: 'second post', author_id: @user.id, comments_counter: 0,
                               likes_counter: 0)
-      @post_two = Post.create(title: 'three post', text: 'third post',  author_id: @user.id, comments_counter: 0,
+      @post_two = Post.create(title: 'three post', text: 'third post', author_id: @user.id, comments_counter: 0,
                               likes_counter: 0)
     end
 
     it "has users's profile picture." do
       visit user_path(@user.id)
-        expect(page).to have_xpath("//img[contains(@src,'http://hello.com/org.png')]")
+      expect(page).to have_xpath("//img[contains(@src,'http://hello.com/org.png')]")
     end
 
     it "has users's username." do
