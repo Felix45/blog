@@ -61,6 +61,7 @@ Install all project dependencies by running the command below
 | 👤 Name | Github | Twitter | LinkedIn |
 |------|--------|---------|----------|
 |Felix Ouma|[@Felix45](https://github.com/Felix45)|[@Felix_Atonoh](https://twitter.com/Felix_Atonoh)|[LinkedIn](https://www.linkedin.com/in/felix-ouma-639766b0/)|
+Ridwan Diallo|[@ridwanediallo](https://github.com/ridwanediallo)|[@twitterridwan](https://twitter.com/RidwaneD)|[LinkedIn](https://www.linkedin.com/in/ridwan-diallo)|
 
 
 ## 🤝 Contributing
