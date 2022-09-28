@@ -18,7 +18,6 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html do
         if @post.save
-          @post.update_posts_counter
           flash[:success] = 'Post saved successfully'
           redirect_to user_post_path(current_user, @post.id)
         else
