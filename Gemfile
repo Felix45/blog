@@ -10,6 +10,7 @@ gem 'rails', '~> 7.0.4'
 gem 'sprockets-rails'
 
 gem 'rubocop'
+gem 'cancancan'
 
 group :test do
   gem 'capybara'
