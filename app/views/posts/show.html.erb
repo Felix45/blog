@@ -11,6 +11,7 @@
       <span>Comments: <%= @post.comments_counter || 0 %> </span>
       <span class="mx-2"> Likes: <%= @post.likes_counter || 0 %></span>
       <%= render 'posts/like_form' %>
+      <%= render 'posts/delete_post' %>
     </div>
   <p><%= @post.text %></p>
   <%= link_to 'Add Comment', new_user_post_comment_url(@post.author, @post) %>
@@ -20,7 +21,14 @@
       <p class="mt-3">No comments Available!</p>
     <% else %>
     <% @post.comments.each do |comment| %>
-      <p class="mt-3"><%= comment.author.name %>: <%= comment.text %></p>
+      <div class="d-flex">
+     <p><%=comment.author.name %>: <%=comment.text %></p>
+     <% if can? :destroy, comment %>
+       <%= form_with url: user_post_comment_path(@post.author.id, @post.id, comment.id), :method => :delete do |f| %>
+         <%= f.submit 'Delete', class: 'glyphicon glyphicon-trash mx-2' %>
+       <% end %>
+     <% end %>
+     </div>
     <% end %>
 <% end %>
 
