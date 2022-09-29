@@ -34,6 +34,11 @@
         <%= form_with url: user_post_likes_path(post.author, post), method: :post do |f| %>
           <%= f.submit 'Like post' %>
         <% end %>
+        <% if can? :destroy, post %>
+          <%= form_with url: user_post_path(@user.id, post.id), :method => :delete do |f| %>
+            <%= f.submit 'Delete post', class: 'btn-danger btn-sm mx-2' %>
+          <% end %>
+        <% end %>
       </div>
     </section>
   <% end %>
