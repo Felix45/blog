@@ -10,9 +10,7 @@ class Api::V1::CommentsController < ApiController
     @post = Post.find(params[:post_id])
     @comment = @post.comments.new(comment_params)
     @comment.post_id = @post.id
-    if @comment.save
-      render json: @comment
-    end
+    render json: @comment if @comment.save
   end
 
   def comment_params
