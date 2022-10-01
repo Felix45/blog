@@ -9,6 +9,11 @@ gem 'rails', '~> 7.0.4'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
+gem 'jwt'
+
+gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt-ruby'
+
 gem 'cancancan'
 gem 'rubocop'
 
