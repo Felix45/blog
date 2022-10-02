@@ -55,6 +55,10 @@ Install all project dependencies by running the command below
 ``` 
   $ rspec
 ```
+### API documentation
+```
+  $ http://localhost:3000/api-docs
+```
 
 ### Authors
 
