@@ -15,6 +15,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bcrypt-ruby'
 
 gem 'cancancan'
+gem 'rswag'
 gem 'rubocop'
 
 group :test do
